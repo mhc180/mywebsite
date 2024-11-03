@@ -18,8 +18,31 @@
           document.getElementById('navbar').innerHTML = data;
         });
     </script>
-	  <p>Welcome to my website!</p>
+	  <p class="home"><strong>Welcome!</strong><br />I'm Marcus, a dedicated professional with a passion for continuous growth and excellence. With a solid foundation in IT, I've honed my skills through hands-on experience and rigorous training, making me equipped to tackle complex challenges. Beyond my professional life, I'm an avid darts enthusiast, always aiming for the perfect throw and embracing the strategy, focus, and precision that darts demand.</p>
 
+    <div class="slideshow-wrapper"> <!-- New wrapper div -->
+      <div class="slideshow-container">
+        <div class="slide active">
+          <img src="Pictures/Home/image1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="Pictures/Home/image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="Pictures/Home/image3.jpg" alt="Slide 3">
+        </div>
+    
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    
+      <div class="dots-container">
+        <span class="dot" onclick="setSlide(0)"></span> 
+        <span class="dot" onclick="setSlide(1)"></span> 
+        <span class="dot" onclick="setSlide(2)"></span> 
+      </div>
+    </div>    
+    
     <div id="footer"></div>
     <script>
       fetch('footer.html')
@@ -29,8 +52,10 @@
         });
     </script>
 
+    <script src="script.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
   </body>
 </html>

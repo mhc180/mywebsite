@@ -71,5 +71,100 @@ li {
 
 .home {
     width: 100%;
+    margin-top: 15px;
     text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slideshow-wrapper {
+  max-width: 40%; /* Set wrapper to 40% width */
+  margin: 20px auto; /* Center the wrapper on the page */
+  border: 1px solid black; /* Add a thin black border around the entire slideshow and dots */
+  padding: 10px; /* Optional: add some padding inside the border */
+  border-radius: 5px; /* Optional: round the corners slightly */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%; /* Full width inside the wrapper */
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;  /* Start each slide hidden */
+  position: absolute;
+  width: 100%;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.slide.active {
+  opacity: 1; /* Show active slide */
+  position: relative;
+}
+
+.slide img {
+  max-width: 100%; /* Full width of the slideshow container */
+  max-height: 50vh; /* Limit the height to 50% of the viewport height */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure images are block elements */
+  margin: 0 auto; /* Center the images */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dots-container {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  width: 100%; /* Full width inside the wrapper */
+  margin-top: 10px; /* Add space between slideshow and dots */
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-dot {
+  background-color: #717171;
+}
+
+.center-container {
+  margin: 15px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.dartslist {
+  list-style-type: none;
+  text-align: center;
 }
