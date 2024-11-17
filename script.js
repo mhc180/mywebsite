@@ -1,52 +1,55 @@
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
-const dots = document.getElementsByClassName("dot");
+const slideCounter = document.getElementById("slide-counter");
+let slideInterval;
 
-// Function to initialize and show the first slide
-function initSlides() {
-  slides[slideIndex].classList.add("active"); 
-  dots[slideIndex].classList.add("active-dot");
-  setTimeout(showSlides, 5000); // Initial delay for 5 seconds
+function updateSlideCounter() {
+  slideCounter.textContent = `${slideIndex + 1}/${slides.length}`;
 }
 
-// Main function to show slides
-function showSlides() {
-  // Remove "active" class from current slide and dot
+function showSlide(index) {
+  // Remove "active" from current slide
   slides[slideIndex].classList.remove("active");
-  dots[slideIndex].classList.remove("active-dot");
 
-  // Increment index to move to the next slide
-  slideIndex = (slideIndex + 1) % slides.length; // Loop back to start if at end
+  // Update the index, wrapping around if necessary
+  slideIndex = (index + slides.length) % slides.length;
 
-  // Add "active" class to the new slide and dot
+  // Add "active" to the new slide
   slides[slideIndex].classList.add("active");
-  dots[slideIndex].classList.add("active-dot");
 
-  // Call showSlides again after 5 seconds
-  setTimeout(showSlides, 5000); // 5-second interval
+  // Update the slide counter
+  updateSlideCounter();
 }
 
-// Initialize slides on load
-initSlides();
-
-// Manual slide controls
 function changeSlide(n) {
-  slides[slideIndex].classList.remove("active");
-  dots[slideIndex].classList.remove("active-dot");
-
-  // Calculate new index
-  slideIndex = (slideIndex + n + slides.length) % slides.length;
-
-  slides[slideIndex].classList.add("active");
-  dots[slideIndex].classList.add("active-dot");
+  showSlide(slideIndex + n);
+  resetAutoSlide();
 }
 
-function setSlide(n) {
-  slides[slideIndex].classList.remove("active");
-  dots[slideIndex].classList.remove("active-dot");
-
-  slideIndex = n;
-
-  slides[slideIndex].classList.add("active");
-  dots[slideIndex].classList.add("active-dot");
+function goToBeginning() {
+  showSlide(0);
+  resetAutoSlide();
 }
+
+function goToEnd() {
+  showSlide(slides.length - 1);
+  resetAutoSlide();
+}
+
+function autoSlide() {
+  showSlide(slideIndex + 1);
+}
+
+function resetAutoSlide() {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(autoSlide, 5000);
+}
+
+// Initialize slideshow
+function initSlides() {
+  slides[slideIndex].classList.add("active");
+  updateSlideCounter();
+  slideInterval = setInterval(autoSlide, 5000);
+}
+
+initSlides();

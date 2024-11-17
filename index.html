@@ -20,7 +20,7 @@
     </script>
 	  <p class="home"><strong>Welcome!</strong><br />I'm Marcus, a dedicated professional with a passion for continuous growth and excellence. With a solid foundation in IT, I've honed my skills through hands-on experience and rigorous training, making me equipped to tackle complex challenges. Beyond my professional life, I'm an avid darts enthusiast, always aiming for the perfect throw and embracing the strategy, focus, and precision that darts demand.</p>
 
-    <div class="slideshow-wrapper"> <!-- New wrapper div -->
+    <div class="slideshow-wrapper">
       <div class="slideshow-container">
         <div class="slide active">
           <img src="Pictures/Home/image1.jpg" alt="Slide 1">
@@ -31,17 +31,17 @@
         <div class="slide">
           <img src="Pictures/Home/image3.jpg" alt="Slide 3">
         </div>
+      </div>
     
+      <div class="controls-container">
+        <a class="go-to-beginning" onclick="goToBeginning()">&#171;</a>
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <span id="slide-counter">1/3</span>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <a class="go-to-end" onclick="goToEnd()">&#187;</a>
       </div>
-    
-      <div class="dots-container">
-        <span class="dot" onclick="setSlide(0)"></span> 
-        <span class="dot" onclick="setSlide(1)"></span> 
-        <span class="dot" onclick="setSlide(2)"></span> 
-      </div>
-    </div>    
+    </div>
+            
     
     <div id="footer"></div>
     <script>
