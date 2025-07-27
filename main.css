@@ -87,11 +87,32 @@ li {
 }
 
 .slideshow-wrapper {
-  max-width: 40%;
+  width: 90%;
+  max-width: 600px;
   margin: 20px auto;
   border: 1px solid black;
   padding: 10px;
   border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .controls-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .controls-container a {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  #slide-counter {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 .slideshow-container {
@@ -147,4 +168,20 @@ li {
 
 #slide-counter {
   font-size: 18px;
+}
+
+footer img {
+  margin-right: 10px;
+}
+
+footer span {
+  font-size: 16px;
+}
+
+footer a svg {
+  transition: transform 0.2s ease;
+}
+
+footer a:hover svg {
+  transform: scale(1.1);
 }
