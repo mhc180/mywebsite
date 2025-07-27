@@ -16,6 +16,19 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar').innerHTML = data;
+    
+          // Enable Bootstrap collapse behavior after injecting navbar
+          const navbarToggle = document.querySelector('[data-bs-toggle="collapse"]');
+          if (navbarToggle) {
+            navbarToggle.addEventListener('click', () => {
+              const target = document.querySelector(navbarToggle.getAttribute('data-bs-target'));
+              if (target && target.classList.contains('show')) {
+                new bootstrap.Collapse(target).hide();
+              } else {
+                new bootstrap.Collapse(target).show();
+              }
+            });
+          }
         });
     </script>
 	  <p class="home"><strong>Welcome!</strong><br />I'm Marcus, a dedicated professional with a passion for continuous growth and excellence. With a solid foundation in IT, I've honed my skills through hands-on experience and rigorous training, making me equipped to tackle complex challenges. Beyond my professional life, I'm an avid darts enthusiast, always aiming for the perfect throw and embracing the strategy, focus, and precision that darts demand.</p>
