@@ -6,87 +6,103 @@
         <title>Marcus Cleary - Work Experience</title>
         <link rel="icon" type="image/png" href="Pictures/MC.png">
         <link rel="stylesheet" href="main.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body class="container-fluid">
-    <div class="header">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body class="container-fluid">
+
+        <!-- Page Header -->
         <h1 class="site-title">Work Experience</h1>
+
+        <!-- Navbar -->
         <div id="navbar"></div>
         <script>
             fetch('navbar.html')
                 .then(response => response.text())
                 .then(data => {
-                document.getElementById('navbar').innerHTML = data;
+                    document.getElementById('navbar').innerHTML = data;
                 });
         </script>
-    </div>
 
-    <div class="job">
-        <h2 class="blue-title">Associate IT Infrastructure Engineer - SOCOTEC UK Ltd</h2>
-        <p class="job-duration">April 2024 - Present</p>
-        <ul>
-            <li>Working in a 2nd line support and 3rd line infrastructure role</li>
-            <li>Installing, maintaining and troubleshooting IT Infrastructure across all company sites</li>
-            <li>Managing Active Directory (including on-prem AD services such as DNS, DHCP, RADIUS)</li>
-            <li>Managing the company's 365 tenant (Azure, Entra, Exchange, SharePoint)</li>
-            <li>Maintaining VMWare and HCI virtualization</li>
-            <li>Windows Server OS management</li>
-        </ul>
-    </div>
-    
-	<div class="job">
-        <h2 class="blue-title">IT Support Technician - SOCOTEC UK Ltd</h2>
-        <p class="job-duration">July 2023 - April 2024</p>
-        <p>Whilst working in this role I completed a level 4 network engineer apprenticeship achieving a distinction.</p>
-        <ul>
-            <li>Working in a 2nd line support and 3rd line infrastructure role</li>
-            <li>Troubleshooting and managing firewalls, routers, switches, and other network infrastructure in an MPLS network</li>
-            <li>Support of desktop security/anti-virus systems</li>
-            <li>Managing Active Directory (including on-prem AD services such as DNS, DHCP, RADIUS)</li>
-            <li>Maintaining VMWare and HCI virtualization</li>
-            <li>Windows Server OS management</li>
-        </ul>
-    </div>
+        <!-- Work Experience Section -->
+        <section class="experience-section container-fluid">
 
-    <div class="job">
-        <h2 class="blue-title">IT Support Technician Apprentice - SOCOTEC UK Ltd</h2>
-        <p class="job-duration">March 2022 - July 2023</p>
-        <p>Whilst working in this role I completed a level 3 IT support apprenticeship achieving a merit.</p>
-        <ul>
-            <li>Dealing with 1st and 2nd line tickets</li>
-            <li>Dealing with hardware and software issues</li>
-            <li>Configuring equipment for users</li>
-            <li>Processing new starters and leavers</li>
-        </ul>
-    </div>
+            <!-- Job Card -->
+            <div class="card job-card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h2 class="blue-title">Associate IT Infrastructure Engineer – SOCOTEC UK Ltd</h2>
+                    <p class="job-duration">April 2024 – Present</p>
+                    <ul>
+                        <li>Working in a 2nd line support and 3rd line infrastructure role</li>
+                        <li>Installing, maintaining and troubleshooting IT Infrastructure across all company sites</li>
+                        <li>Managing Active Directory (DNS, DHCP, RADIUS)</li>
+                        <li>Managing the company’s 365 tenant (Azure, Entra, Exchange, SharePoint)</li>
+                        <li>Maintaining VMWare and HCI virtualization</li>
+                        <li>Windows Server OS management</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="job">
-        <h2 class="blue-title">IT Assistant (Kickstart Scheme) - Burton and South Derbyshire College</h2>
-        <p class="job-duration">June 2021 - December 2021</p>
-        <ul>
-            <li>Installation and support of various IT hardware and software</li>
-            <li>Diagnose and correct hardware, software, and basic networking faults</li>
-            <li>Assisting the helpdesk staff with taking phone calls and logging cases</li>
-            <li>Management of printing devices and maintaining paper levels</li>
-            <li>Respond to support requests received via the IT helpdesk</li>
-        </ul>
-    </div>
+            <!-- Job Card -->
+            <div class="card job-card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h2 class="blue-title">IT Support Technician – SOCOTEC UK Ltd</h2>
+                    <p class="job-duration">July 2023 – April 2024</p>
+                    <p>Completed a Level 4 Network Engineer apprenticeship, achieving a distinction.</p>
+                    <ul>
+                        <li>2nd line support and 3rd line infrastructure responsibilities</li>
+                        <li>Troubleshooting and managing firewalls, routers, switches, and MPLS network infrastructure</li>
+                        <li>Support of desktop security and anti‑virus systems</li>
+                        <li>Managing Active Directory (DNS, DHCP, RADIUS)</li>
+                        <li>Maintaining VMWare and HCI virtualization</li>
+                        <li>Windows Server OS management</li>
+                    </ul>
+                </div>
+            </div>
 
-    <div id="footer"></div>
-    <script>
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer').innerHTML = data;
-        });
-    </script>
+            <!-- Job Card -->
+            <div class="card job-card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h2 class="blue-title">IT Support Technician Apprentice – SOCOTEC UK Ltd</h2>
+                    <p class="job-duration">March 2022 – July 2023</p>
+                    <p>Completed a Level 3 IT Support apprenticeship, achieving a merit.</p>
+                    <ul>
+                        <li>Handling 1st and 2nd line support tickets</li>
+                        <li>Diagnosing hardware and software issues</li>
+                        <li>Configuring equipment for users</li>
+                        <li>Processing new starters and leavers</li>
+                    </ul>
+                </div>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
-</html>
+            <!-- Job Card -->
+            <div class="card job-card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h2 class="blue-title">IT Assistant – Burton and South Derbyshire College</h2>
+                    <p class="job-duration">June 2021 – December 2021</p>
+                    <ul>
+                        <li>Installation and support of IT hardware and software</li>
+                        <li>Diagnosing hardware, software, and basic networking faults</li>
+                        <li>Assisting helpdesk staff with calls and case logging</li>
+                        <li>Managing printing devices and maintaining supplies</li>
+                        <li>Responding to support requests via the IT helpdesk</li>
+                    </ul>
+                </div>
+            </div>
 
-        
-        
-    </div>
-</body>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+        <script>
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
 </html>

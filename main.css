@@ -2,12 +2,12 @@
    Base Styles
 -------------------------------------------------- */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #eef1f5;
+  color: #2c2c2c;
 }
 
 h1, h2, h3 {
@@ -31,16 +31,81 @@ a {
 }
 
 /* --------------------------------------------------
-   Title Above Navbar
+   Page Title
 -------------------------------------------------- */
 .site-title {
   background: linear-gradient(135deg, #1a2a40, #27496d);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 35px 0;
   margin: 0;
   font-size: 2rem;
-  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.blue-title {
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+.job-duration {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.note {
+  color: #888;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.certifications img {
+  width: 100px;
+}
+
+.certifications table {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.qual {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+.qual li {
+  margin: 0 15px;
+}
+
+.home {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.center-container {
+  margin: 15px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.dartslist {
+  list-style-type: none;
+  text-align: center;
 }
 
 /* --------------------------------------------------
@@ -142,70 +207,52 @@ a {
 }
 
 /* --------------------------------------------------
-   Existing Styles (kept as-is)
+   Experience Section
 -------------------------------------------------- */
+.experience-section {
+  background: linear-gradient(135deg, #1a2a40, #27496d);
+  padding: 60px 20px;
+}
+
+.job-card {
+  border-left: 6px solid #1a2a40;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 80%;
+  margin: 0 auto 30px auto;
+  transition: all 0.25s ease;
+}
+
+.job-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 
 .blue-title {
-  color: #0056b3;
-  margin-bottom: 5px;
+  color: #003f88;
 }
 
 .job-duration {
   font-style: italic;
-  margin-bottom: 10px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
-li {
-  margin-bottom: 5px;
-}
-
-.note {
-  color: #888;
-  font-style: italic;
+.job-card ul {
   margin-top: 10px;
+  padding-left: 20px;
 }
 
-.section {
-  margin-bottom: 20px;
+.job-card li {
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-.certifications img {
-  width: 100px;
-}
-
-.certifications table {
-  width: 60%;
-  margin: auto;
-  text-align: center;
-}
-
-.qual {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 auto 25px;
-  text-align: center;
-}
-
-.qual li {
-  margin: 0 15px;
-}
-
-.home {
-  width: 100%;
-  margin-top: 15px;
-  text-align: center;
-}
-
-.center-container {
-  margin: 15px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-
-.dartslist {
-  list-style-type: none;
-  text-align: center;
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  border-color: #4a4a4a;
 }
 
 /* --------------------------------------------------
@@ -315,31 +362,26 @@ footer span {
 /* --------------------------------------------------
    Responsive Styles
 -------------------------------------------------- */
+@media (max-width: 768px) {
+  .job-card {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .site-title {
+    font-size: 2rem;
+    padding: 25px 0;
+  }
+
+  .job-card h2 {
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 576px) {
-
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-  }
-
-  .controls-container {
-    grid-template-columns: auto auto auto auto auto;
-    gap: 5px;
-  }
-
-  .controls-container a {
-    font-size: 14px;
-    padding: 5px;
-  }
-
-  #slide-counter {
-    font-size: 14px;
-  }
-
   footer {
     flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
   }
 }
