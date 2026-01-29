@@ -20,14 +20,57 @@ a {
   color: inherit;
 }
 
-/* Container */
-.container {
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+li {
+  margin-bottom: 5px;
+}
+
+nav {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.blue-title {
+  color: #003f88;
+}
+
+.center-container {
+  margin: 15px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------
+   Footer
+-------------------------------------------------- */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+  border-top: 1px solid #444;
+  flex-wrap: nowrap;
+}
+
+footer img {
+  margin-right: 10px;
+}
+
+footer span {
+  font-size: 16px;
+}
+
+/* Social icons */
+.social-link svg {
+  fill: white !important;
+  transition: 0.2s ease;
+}
+
+.social-link:hover svg {
+  fill: #f2b138 !important;
 }
 
 /* --------------------------------------------------
@@ -42,70 +85,6 @@ a {
   font-size: 2rem;
   letter-spacing: 1px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-}
-
-.blue-title {
-  color: #0056b3;
-  margin-bottom: 5px;
-}
-
-.job-duration {
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-.note {
-  color: #888;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-.section {
-  margin-bottom: 20px;
-}
-
-.certifications img {
-  width: 100px;
-}
-
-.certifications table {
-  width: 60%;
-  margin: auto;
-  text-align: center;
-}
-
-.qual {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 auto 25px;
-  text-align: center;
-}
-
-.qual li {
-  margin: 0 15px;
-}
-
-.home {
-  width: 100%;
-  margin-top: 15px;
-  text-align: center;
-}
-
-.center-container {
-  margin: 15px;
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-
-.dartslist {
-  list-style-type: none;
-  text-align: center;
 }
 
 /* --------------------------------------------------
@@ -229,14 +208,11 @@ li {
   font-weight: 600;
 }
 
-.blue-title {
-  color: #003f88;
-}
-
 .job-duration {
+  text-align: center;
   font-style: italic;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .job-card ul {
@@ -253,6 +229,53 @@ li {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.18);
   border-color: #4a4a4a;
+}
+
+/* --------------------------------------------------
+   Credential Section
+-------------------------------------------------- */
+.cred-section {
+  background: linear-gradient(135deg, #1a2a40, #27496d);
+  padding: 60px 20px;
+}
+
+.cred-card {
+  border-left: 6px solid #1a2a40;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 50%;
+  margin: 0 auto 30px auto;
+  transition: all 0.25s ease;
+}
+
+.cert-card {
+  border-left: 6px solid #1a2a40;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 80%;
+  margin: 0 auto 30px auto;
+  transition: all 0.25s ease;
+}
+
+.certifications img {
+  width: 100px;
+}
+
+.certifications table {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.qual {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+.qual li {
+  margin: 0 15px;
 }
 
 /* --------------------------------------------------
@@ -326,37 +349,9 @@ li {
   text-align: center;
 }
 
-/* --------------------------------------------------
-   Footer
--------------------------------------------------- */
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #222;
-  color: white;
-  border-top: 1px solid #444;
-  flex-wrap: nowrap;
-}
-
-footer img {
-  margin-right: 10px;
-}
-
-footer span {
-  font-size: 16px;
-}
-
-/* Social icons */
-.social-link svg {
-  fill: white !important;
-  transition: 0.2s ease;
-}
-
-.social-link:hover svg {
-  fill: #f2b138 !important;
+.dartslist {
+  list-style-type: none;
+  text-align: center;
 }
 
 /* --------------------------------------------------
