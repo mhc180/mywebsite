@@ -234,9 +234,13 @@ footer span {
 /* --------------------------------------------------
    Credential Section
 -------------------------------------------------- */
+main.container {
+  margin-top: 40px;
+}
+
 .cred-section {
   background: linear-gradient(135deg, #1a2a40, #27496d);
-  padding: 60px 20px;
+  padding: 100px 20px 60px;
 }
 
 .cred-card {
@@ -262,7 +266,7 @@ footer span {
 }
 
 .certifications table {
-  width: 60%;
+  width: 90%;
   margin: auto;
   text-align: center;
 }
@@ -370,6 +374,10 @@ footer span {
 
   .job-card h2 {
     font-size: 1.25rem;
+  }
+
+  .cred-card, .cert-card {
+    width: 90%;
   }
 }
 
