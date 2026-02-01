@@ -281,19 +281,26 @@ main.container {
 /* --------------------------------------------------
    Slideshow Styles
 -------------------------------------------------- */
+/* Slideshow Wrapper */
 .slideshow-wrapper {
-  width: 90%;
-  max-width: 600px;
-  margin: 20px auto;
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #fff;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Slideshow Container */
 .slideshow-container {
   position: relative;
   width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -301,57 +308,84 @@ main.container {
   opacity: 0;
   position: absolute;
   width: 100%;
-  transition: opacity 1s ease-in-out;
+  height: 100%;
+  transition: opacity 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide.active {
   opacity: 1;
-  position: relative;
+  position: absolute;
 }
 
 .slide img {
   max-width: 100%;
-  max-height: 50vh;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
-/* Slideshow Controls */
+/* Controls Container */
 .controls-container {
-  display: grid;
-  grid-template-columns: auto auto 1fr auto auto;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  padding: 10px;
-  background: #333;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-.controls-container a {
+.controls-container button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.controls-container a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.controls-container button:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 #slide-counter {
   font-size: 18px;
-  text-align: center;
+  font-weight: 600;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .dartslist {
-  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
   text-align: center;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.darts-card {
+  max-width: 500px;
+  margin: 0 auto;     
 }
 
 /* --------------------------------------------------
