@@ -260,10 +260,6 @@ main.container {
   transition: all 0.25s ease;
 }
 
-.certifications img {
-  width: 100px;
-}
-
 .certifications table {
   width: 90%;
   margin: auto;
